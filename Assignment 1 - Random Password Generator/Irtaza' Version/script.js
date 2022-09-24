@@ -1,7 +1,5 @@
-const characterAmountRange = document.getElementById('characterAmountRange')
-const characterAmountNumber = document.getElementById('characterAmountNumber')
 const form = document.getElementById('passwordGeneratorForm') 
-const passwordDisplay = document.getElementById('passwordDisplay') 
+const passwordDisplay = document.getElementById('passwordDisplay')
 
 const includeUppercaseElement = document.getElementById('includeUppercase')
 const includeNumbersElement = document.getElementById('includeNumbers')
@@ -12,12 +10,9 @@ const UPPERCASE_CHAR_CODES = arrayFromLowToHigh(65, 90)
 const NUMBER_CHAR_CODES = arrayFromLowToHigh(48, 57)
 const SYMBOL_CHAR_CODES = arrayFromLowToHigh(33, 47).concat(arrayFromLowToHigh(58, 64)).concat(arrayFromLowToHigh(91, 96)).concat(arrayFromLowToHigh(123, 126))
 
-characterAmountNumber.addEventListener('input', syncCharacterAmount)
-characterAmountRange.addEventListener('input', syncCharacterAmount)
-
 form.addEventListener('submit', e => {
     e.preventDefault()
-    const characterAmount = characterAmountNumber.value
+    const characterAmount = clicks
     const includeUppercase = includeUppercaseElement.checked
     const includeNumbers = includeNumbersElement.checked
     const includeSymbols = includeSymbolsElement.checked
@@ -48,8 +43,9 @@ function arrayFromLowToHigh(low, high){
     return array
 }
 
-function syncCharacterAmount(e){
-    const value = e.target.value
-    characterAmountNumber.value = value
-    characterAmountRange.value = value
-}
+var clicks = 3;
+
+function onClick() {
+  clicks += 1;
+  document.getElementById("clicks").innerHTML = clicks;
+};
