@@ -1,6 +1,6 @@
 body{
-    background-color: #333;
-    color: white;
+    background-color: #f1faee;
+    color: #a8dadc;
     margin: 0;
     min-height: 100vh;
     display: flex;
@@ -10,7 +10,7 @@ body{
 }
 
 .container{
-    background-color: #00af838e;
+    background-color: #1d3557;
     padding: 3rem;
     border-radius: 1rem;
     border: .1px solid white;
@@ -63,30 +63,41 @@ label{
 
 .btn{
     grid-column: span 2;
-    background-color: transparent;
+    background-color:  #e63946;
     border: 2px solid white;
     color: white;
     padding: 0.5rem 1rem;
-    font-weight: bold;
+    font-weight:1000;
     border-radius: 1rem;
     transition: all 0.3s ease;
 }
 
 .btn:hover{
-    background-color: #94c9bcd7;
-    /* transition: 0.3s; */
+    background-color: #f95151d7;
     transition: all 0.3s ease;
-    background: linear-gradient(0deg, rgba(214,214,214,0) 0%, rgba(3,210,177,0.4934567577030813) 100%);
-    -webkit-box-shadow:0px 0px 17px 2px rgba(255,255,255,0.47);
-    -moz-box-shadow: 0px 0px 17px 2px rgba(255,255,255,0.47);
-    box-shadow: 0px 0px 17px 2px rgba(255,255,255,0.47);
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
 }
 
 .btn:active{
-    background-color: #6c978cd7;
-    /* transition: 0.3s; */
+    background-color: #d30202d7;
     transition: all 0.3s ease;
-    -webkit-box-shadow:0px 0px 17px 2px rgba(255,255,255,0.47);
-    -moz-box-shadow: 0px 0px 17px 2px rgba(255,255,255,0.47);
-    box-shadow: 0px 0px 17px 2px rgba(255,255,255,0.47);
+}
+
+
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
 }
